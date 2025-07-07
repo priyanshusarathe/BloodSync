@@ -1,0 +1,82 @@
+<web-app>
+     <listener>
+        <listener-class>in.bloodsync.dbutil.Dblistener</listener-class> 
+     </listener>
+     
+<context-param>
+     <param-name>url</param-name>
+     <param-value>jdbc:mysql://localhost:3306/bloodsync</param-value>
+</context-param>
+    <context-param>
+     <param-name>username</param-name>
+     <param-value>root</param-value>
+</context-param>
+<context-param>
+     <param-name>password</param-name>
+     <param-value>root</param-value>
+</context-param>
+<servlet>
+    <servlet-name>DonorRegisterServlet</servlet-name>
+    <servlet-class>in.bloodsync.servlet.api.DonorRegisterServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+ <servlet-name>DonorRegisterServlet</servlet-name>
+ <url-pattern> /DonorRegisterServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>HospitalRequestServlet</servlet-name>
+    <servlet-class>in.bloodsync.servlet.api.HospitalRequestServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+ <servlet-name>HospitalRequestServlet</servlet-name>
+ <url-pattern>/HospitalRequestServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+<init-param>
+     <param-name>emailId</param-name>
+     <param-value>admin@gmail.com</param-value>
+</init-param>
+<init-param>
+     <param-name>password</param-name>
+     <param-value>admin</param-value>
+</init-param>
+    <servlet-name>AdminloginServlet</servlet-name>
+    <servlet-class>in.bloodsync.servlet.api.AdminloginServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+ <servlet-name>AdminloginServlet</servlet-name>
+ <url-pattern>/AdminloginServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>AdminDashboardServlet</servlet-name>
+    <servlet-class>in.bloodsync.servlet.apis.AdminDashboardServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+ <servlet-name>AdminDashboardServlet</servlet-name>
+ <url-pattern>/AdminDashboardServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>AdminBloodStockServlet</servlet-name>
+    <servlet-class>in.bloodsync.servlet.apis.AdminBloodStockServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+ <servlet-name>AdminBloodStockServlet</servlet-name>
+ <url-pattern>/AdminBloodStockServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>ManageDonorServlet</servlet-name>
+    <servlet-class>in.bloodsync.servlet.apis.ManageDonorServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+ <servlet-name>ManageDonorServlet</servlet-name>
+ <url-pattern>/ManageDonorServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>ManageBloodRequestServlet</servlet-name>
+    <servlet-class>in.bloodsync.servlet.apis.ManageBloodRequestServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+ <servlet-name>ManageBloodRequestServlet</servlet-name>
+ <url-pattern>/ManageBloodRequestServlet</url-pattern>
+</servlet-mapping>
+</web-app>

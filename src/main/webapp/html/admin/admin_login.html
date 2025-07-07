@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Login Page</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Admin Login</h1>
+    </header>
+    <section class="form-container">
+      <form action="../../AdminloginServlet" method="post">
+        <label for="emailId">Email Id:</label>
+        <input type="email" name="emailId" id="emailId" required /><br />
+        <label for="pwd">Password:</label>
+        <input type="password" name="pwd" id="pwd" required />
+        <button type="submit">Login</button>
+      </form>
+    </section>
+    <footer>
+      <p>&copy 2025 BloodSync | All Rights Resvered</p>
+    </footer>
+  </body>
+</html>
